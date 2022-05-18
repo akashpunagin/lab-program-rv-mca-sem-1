@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Register Page</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script src="script.js"></script>
+
+		<style>
+			.row {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container jumbotron text-center">
+			<h1>Blog Website<h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>Register</h2>
+		
+				<form>
+
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3" for="username">Username</label>
+						<input class="col-sm-2" type="text" id="username" placeholder="Enter Username" required />
+					</div>
+
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3" for="content">Content</label>
+						<textarea class="col-sm-2" type="text" id="content" placeholder="Enter your content"></textarea>
+					</div>
+	
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3" for="password">Password</label>
+						<input class="col-sm-2" type="password" id="password" placeholder="Enter Passowrd" required />
+					</div>
+
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3" for="confirmPassword">Confirm Password</label>
+						<input class="col-sm-2" type="password" id="confirmPassword" placeholder="Confirm Passowrd" required />
+
+					</div>
+
+					<div class="row">
+						<input class="btn btn-primary" type="submit" value="Submit" onclick="handleRegisterSubmit(this.form)">
+					</div>
+					
+					<div class="row">
+						<h3>Already have an account? <a href="login">Login</a></h3>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

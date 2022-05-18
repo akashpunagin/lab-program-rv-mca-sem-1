@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Details As JSON</title>
+		<script src="data.js"></script>
+		<script src="script.js"></script>
+
+		<style>
+			button {
+				padding: 10px 20px;
+				border: 2px solid black;
+				border-radius: 5px;
+			}
+
+			button:hover{
+				padding: 10px 30px;
+				border-radius: 30px;
+				border: 2px dashed black;
+				font-size: 20px;
+				transition: 500ms;
+			}
+
+			table {
+				margin-top: 30px;
+			}
+			
+			table th {
+				color: purple;
+				text-decoration: underline;
+			}
+
+
+			table th, table tr td{
+				padding: 10px;
+				border: 1px solid black;
+				text-align: center;
+			}
+
+			table tr:hover td {
+				color: white;
+				background-color: rgb(115,115,115);
+			}
+		</style>
+
+	</head>
+	<body>
+		<center>
+			<button onclick="getStudentDetails()">Get Student Details</button>
+			<table id="student-details"></table>
+		</center>
+	</body>
+</html>

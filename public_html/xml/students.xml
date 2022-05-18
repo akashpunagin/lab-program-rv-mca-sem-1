@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE STUDENTS [
+	<!ELEMENT STUDENT (name, sapid, course, semester)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT sapid (#PCDATA)>
+	<!ELEMENT course (#PCDATA)>
+	<!ELEMENT semester (#PCDATA)>
+]>
+
+<STUDENTS>
+	<STUDENT>
+		<name>Raju</name>
+		<sapid>RVCE21MCA001</sapid>
+		<course>MCA</course>
+		<semester>1</semester>
+	</STUDENT>
+	<STUDENT>
+		<name>Bheem</name>
+		<sapid>RVCE21MCA002</sapid>
+		<course>MCA</course>
+		<semester>3</semester>
+	</STUDENT>
+	<STUDENT>
+		<name>Lola</name>
+		<sapid>RVCE21MCA011</sapid>
+		<course>MCA</course>
+		<semester>4</semester>
+	</STUDENT>
+	<STUDENT>
+		<name>Chutki</name>
+		<sapid>RVCE21MCA101</sapid>
+		<course>MCA</course>
+		<semester>2</semester>
+	</STUDENT>
+</STUDENTS>

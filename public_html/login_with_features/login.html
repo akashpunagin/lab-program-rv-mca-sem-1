@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Page</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script src="script.js"></script>
+
+		<style>
+			.row {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container jumbotron text-center">
+			<h1>Blog Website<h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>Login</h2>
+		
+				<form>
+
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3"  for="username">Username</label>
+						<input class="col-sm-2" type="text" id="username" placeholder="Enter Username" required />
+					</div>
+	
+					<div class="row">
+						<label class="col-sm-2 col-sm-offset-3" for="password">Password</label>
+						<input class="col-sm-2" type="password" id="password" placeholder="Enter Passowrd" required />
+					</div>
+
+					<div class="row">
+						<input class="btn btn-primary" type="submit" value="Submit" onclick="handleLoginSubmit(this.form)">
+					</div>
+
+					<div class="row">
+						<h4>Don't have an account? <a href="register.html">Register now!</a></h4>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

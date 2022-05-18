@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Page</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="container jumbotron text-center">
+			<h1>E-Commerce Website<h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2>Login</h2>
+		
+				<form>
+
+					<div class="row">
+						<label for="username" />
+						<input type="text" id="username" placeholder="Enter Username" required />
+					</div>
+	
+					<div class="row">
+						<label for="password" />
+						<input type="password" id="password" placeholder="Enter Passowrd" required />
+					</div>
+
+					<div class="row">
+						<input type="submit" value="Submit" onclick="handleSubmit(this.form)">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

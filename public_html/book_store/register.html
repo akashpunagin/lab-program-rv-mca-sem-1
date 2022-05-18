@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Register</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<style>
+			section .row {
+				background-color: rgb(200,200,200);
+				display: flex;
+				justify-content: center;
+				height: 100vh;
+				align-items: center;
+			}
+
+			section .row #login-col {
+				background-color: rgb(150,150,150);
+				padding: 20px 50px;
+				border-radius: 30px;
+			}
+
+			section .row #login-col label{
+				padding-top: 15px;	
+			}
+
+			section .row #login-col input {
+				border-radius: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="container">
+			<div class="row text-center">
+				<div class="col-sm-3" id="login-col">
+					<h1 class="jumbotron">Sign up</h1>
+					<label for="username">Username</label>
+					<input type="text" id="username" placeholder="  Enter Username"/>
+
+					<label for="password">Password</label>		
+					<input type="password" id="password" placeholder="  Enter Password" />
+
+					<label for="confirm-password">Confirm Password</label>
+					<input type="password" if="confirm-password" placeholder="  Confirm Password">
+					<br/ >
+					<br/ >
+
+					<button class="btn btn-primary"> Sign up</button>
+
+					<br />
+					<br />
+					<a href="login.html">Already signed in? Login now</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
+

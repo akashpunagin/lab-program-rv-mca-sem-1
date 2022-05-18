@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .arc text {
+            font: 10px sans-serif;
+            text-anchor: middle;
+        }
+
+        .arc path {
+            stroke: #fff;
+        }
+
+        .title {
+            fill: teal;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <svg width="500" height="400"></svg>
+    <script>
+
+        let svg = d3.select("svg");
+        let margin = 200;
+        let width = svg.attr("width") - margin;
+        let height = svg.attr("height") - margin;
+	  
+	    /*
+	let svg = d3.selectAll("body").append("svg")
+	    .attr("width", 300)
+	    .attr("height", 300);
+	*/
+
+	let arc = svg.arc()
+	    .innerRadius(30)
+	    .outerRadius(120)
+	    .startAngle(120 * (Math.PI/180))
+	    .endAngle(240 * (Math.PI/180));
+
+	let plot = svg
+	    .append("g")
+	    .attr("class", "arc");
+
+	let gauge = plot
+	    .append("path")
+	    .attr("d", arc)
+	    .attr("class", "gauge")
+	    .style("fill", "#ddd")
+	    .attr("transform", "translate(150,130) rotate(180)")
+	    .on("click", turnNeedle);
+
+	let needle = svg
+	    .append("g")
+	    .attr("class", "needle")
+	    .attr("transform", "translate( 0 , 0 )")
+	    .append("path")
+	    .attr("class", "tri")
+	    .attr("d", "M" + (300/2 + 3) + " " + (120 + 10) + " L" + 300/2 + " 0 L" + (300/2 - 3) + " " + (120 + 10) + " C" + (300/2 - 3) + " " + (120 + 20) + " " + (300/2 + 3) + " " + (120 + 20) + " " + (300/2 + 3) + " " + (120 + 10) + " Z")
+	    .attr("transform", "rotate(-60, " + 300/2 + "," + (120 + 10) + ")");
+
+	function turnNeedle()
+	{
+	    needle
+		.transition()
+		.duration(2000)
+		.attrTween("transform", tween);
+	    function tween(d, i, a) {
+	      return d3.interpolateString("rotate(-60, 150, 130)", "rotate(60, 150, 130)");
+	    }
+	}
+     </script>
+</body>
+</html>
+
